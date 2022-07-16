@@ -26,6 +26,8 @@ void main() {
 
   final newResult = convertToStandartDolor(100, dolarIndex: 13);
   final newResult2 = convertToStandartDolor(100);
+  final newResult3 = convertToEuro(userMoney: 500);
+  sayHello('aa');
 }
 
 void controlUserMoney(int money, int minumumValue) {
@@ -42,4 +44,12 @@ int convertToDolor(int userMoney) {
 
 int convertToStandartDolor(int userMoney, {int dolarIndex: 14}) {
   return userMoney ~/ dolarIndex;
+}
+
+int convertToEuro({required int userMoney, int dolarIndex = 14}) {
+  return userMoney ~/ dolarIndex;
+}
+
+String sayHello(String name) {
+  return 'hello $name';
 }
